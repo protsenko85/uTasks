@@ -1,0 +1,28 @@
+﻿<Window x:Class="uTasks.ServicesList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:uTasks"
+        mc:Ignorable="d"
+        Icon="C:\Users\user\Desktop\uTasks\uTasks\Images\1593671387_10.jpg" 
+        WindowStartupLocation="CenterScreen"
+        Title="ServicesList" Height="317.938" Width="551.645" Loaded="Window_Loaded">
+    <Grid>
+        <ListView Name ="List" HorizontalAlignment="Left" Height="231" Margin="248,0,0,0" VerticalAlignment="Top" Width="286" RenderTransformOrigin="0.48,0.523" SelectedIndex="4" SelectionMode="Multiple">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Назва" DisplayMemberBinding="{Binding _name}"/>
+                    <GridViewColumn Header="Вартість" DisplayMemberBinding="{Binding _price}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Background="#078600" x:Name="acceptBtn" Content="Зберігти" HorizontalAlignment="Left" Margin="248,236,0,0" VerticalAlignment="Top" Width="115" Click="acceptBtn_Click"/>
+        <Button Background="#078600" x:Name="cancelBtn" Content="Відмінити" Margin="419,236,10,0" VerticalAlignment="Top" Click="cancelBtn_Click"/>
+        <Button Background="#078600" x:Name="addOneBtn" Content="Додати найменування" HorizontalAlignment="Left" Margin="38,138,0,0" VerticalAlignment="Top" Width="182" Click="addOneBtn_Click"/>
+        <Button Background="#078600" x:Name="deleteBtn" Content="Видалити найменування" HorizontalAlignment="Left" Margin="38,22,0,0" VerticalAlignment="Top" Width="182" Click="deleteBtn_Click"/>
+        <TextBox x:Name="newOneTxtPrice" HorizontalAlignment="Left" Height="23" Margin="66,98,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Вартість" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="newOneTxtName" HorizontalAlignment="Left" Height="23" Margin="66,70,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Назва" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
